@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'CircularSpTitle', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1db954 0%, #0d6e3e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .signup-container {
+            background: #121212;
+            border-radius: 8px;
+            padding: 48px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-icon {
+            font-size: 40px;
+            color: #1db954;
+            margin-bottom: 15px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #404040;
+            border-radius: 24px;
+            font-size: 14px;
+            background: #282828;
+            color: #fff;
+            transition: border-color 0.2s;
+            padding-left: 16px;
+        }
+        
+        input::placeholder,
+        select option {
+            color: #b3b3b3;
+        }
+        
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #1db954;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1db954;
+            color: #000;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #1ed760;
+            transform: scale(1.02);
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #b3b3b3;
+            font-size: 14px;
+        }
+        
+        .login-link a {
+            color: #1db954;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .terms {
+            font-size: 11px;
+            color: #b3b3b3;
+            text-align: center;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="logo">
+            <div class="logo-icon">♫</div>
+            <div class="logo-text">SPOTIFY</div>
+        </div>
+        
+        <h1>Create Account</h1>
+        
+        <form onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-email">Confirm your email</label>
+                <input type="email" id="confirm-email" name="confirm-email" placeholder="name@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="At least 8 characters" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fname">What should we call you?</label>
+                <input type="text" id="fname" name="fname" placeholder="Your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="birth">Date of birth</label>
+                <input type="text" id="birth" name="birth" placeholder="dd/mm/yyyy" required>
+            </div>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        
+        <div class="login-link">
+            Already have a Spotify account? <a href="#">Log in</a>
+        </div>
+        
+        <div class="terms">
+            By clicking "Sign Up", you agree to our Terms of Service and acknowledge that our Privacy Policy applies to you.
+        </div>
+    </div>
+    
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>
